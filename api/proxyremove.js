@@ -1,5 +1,4 @@
 export default async function handler(req, res) {
-  // Your Google Apps Script URL goes here
   const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz8zp29BiK4BtTjSaU_7F22c7wO44SegSTwXZ2SAWKCm-S59w2AXJCuilhGqxcsDEP1bw/exec";
 
   try {
@@ -7,7 +6,7 @@ export default async function handler(req, res) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(req.body),
-      redirect: "follow" // This is what fixes your redirect problem!
+      redirect: "follow" 
     });
 
     const text = await response.text();
