@@ -1,6 +1,6 @@
 export default async function handler(req, res) {
   // Your Google Apps Script URL goes here
-  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyRi9yBVpairr3zHvEZ5lcYhBa6h_4IuDqvbN46mjy_aLwq_aLVzHacLFEcACsQEBh2ig/exec";
+  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx1BUof84d3nkbYgjyz7Xf8uH0eX5ZUVP7Yawj_MoOPTY4F9c_hq-779TPVIU1njkXcGg/exec";
 
   try {
     const response = await fetch(GOOGLE_SCRIPT_URL, {
