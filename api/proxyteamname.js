@@ -1,5 +1,5 @@
 export default async function handler(req, res) {
-  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxldekZocCjgqqDIVo7F2HjNJOyqZk0WA2Qc9lYWXxV6LePCU3-p8g7dCuIVVzaUQv9UA/exec";
+  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwj7_GjTK3NRdsMrYmerNfZbd4RvwFgUcdiZjqAIrtBfLgByzt8QQGIxR7OEC3oCs2Qpw/exec";
 
   try {
     const response = await fetch(GOOGLE_SCRIPT_URL, {
