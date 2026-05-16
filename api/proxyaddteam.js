@@ -1,9 +1,9 @@
 export default async function handler(req, res) {
-  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyNJMHEvTykiVtyuAH5Y93Rehoejic5lcLMnwJQJfcBvTEkaxoAiUHpYL49v7nGrWeCoQ/exec";
+  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxu-KqjRMSh5eqHzT_dAkUutR5V7nlAHjNsXyDfGokiOu7s0ccORX4xBRU1NQguJx44JQ/exec";
 
   try {
     const response = await fetch(GOOGLE_SCRIPT_URL, {
-      method: "GET",
+      method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(req.body),
       redirect: "follow" 
