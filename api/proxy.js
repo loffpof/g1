@@ -2,7 +2,7 @@ export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
-
+// Add + Vice Add
   const SCRIPT_URLS = {
     PlayerAdd: process.env.GOOGLE_SCRIPT_PLAYER_ADD || "https://script.google.com/macros/s/AKfycbx1BUof84d3nkbYgjyz7Xf8uH0eX5ZUVP7Yawj_MoOPTY4F9c_hq-779TPVIU1njkXcGg/exec",
     ViceAdd: process.env.GOOGLE_SCRIPT_VICE_ADD || "https://script.google.com/macros/s/AKfycbzBU1Nh1sLxk71At0GycVkxZlNGRwuvfKeh_a_mEO5CtXP6-F9LFgYBFSGNY8yrClHoAw/exec",
