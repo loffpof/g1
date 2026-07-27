@@ -2,7 +2,7 @@ export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
-
+// Remove + Vice remove
   const SCRIPT_URLS = {
     PlayerRemove: "https://script.google.com/macros/s/AKfycbz8zp29BiK4BtTjSaU_7F22c7wO44SegSTwXZ2SAWKCm-S59w2AXJCuilhGqxcsDEP1bw/exec",
     ViceRemove: "https://script.google.com/macros/s/AKfycbw_w2qv6mmO86iFHS7PzkZQ_YLboMh9PmxwOZtHTxGxNL2a-h_4cGlshUusaX4lgM8m/exec",
