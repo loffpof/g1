@@ -2,13 +2,12 @@ export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
-// /rvlupdate, /rvlcaptainchange, /rvlteamnamechange, /rvlsnake, /rvlselfremove,
+
+// /rvlcaptainchange, /rvlteamnamechange, /rvlsnake | /rvlselfremove is connected to proxyUtils
   const SCRIPT_URLS = {
-    PlayerUpdate: process.env.GOOGLE_SCRIPT_PLAYER_UPDATE || "https://script.google.com/macros/s/YOUR_PLAYER_UPDATE_ID/exec",
-    CaptainChange: process.env.GOOGLE_SCRIPT_CAPTAIN_CHANGE || "https://script.google.com/macros/s/YOUR_CAPTAIN_CHANGE_ID/exec",
-    TeamNameChange: process.env.GOOGLE_SCRIPT_TEAM_NAME_CHANGE || "https://script.google.com/macros/s/YOUR_TEAM_NAME_CHANGE_ID/exec",
-    PlayerSnake: process.env.GOOGLE_SCRIPT_PLAYER_SNAKE || "https://script.google.com/macros/s/YOUR_PLAYER_SNAKE_ID/exec",
-    SelfRemove: process.env.GOOGLE_SCRIPT_SELF_REMOVE || "https://script.google.com/macros/s/YOUR_SELF_REMOVE_ID/exec",
+    CaptainChange: process.env.GOOGLE_SCRIPT_CAPTAIN_CHANGE || "https://script.google.com/macros/s/AKfycbxoXdXFSwDrArVjnERudf8dMSRHge08rt7koSGo59wgUdGSvrIs99yhJLAy_v3z3PwJrw/exec",
+    TeamNameChange: process.env.GOOGLE_SCRIPT_TEAM_NAME_CHANGE || "https://script.google.com/macros/s/AKfycbz7Z_yXHLQ0X7CjdVC8U5zhriSDjkOuqroy-bKsD_eXcthwBH4M-HJjfZzOybJh_Z2bZg/exec",
+    PlayerSnake: process.env.GOOGLE_SCRIPT_PLAYER_SNAKE || "https://script.google.com/macros/s/AKfycbxLecxLghz3LbKBR-r0tkbDpHe7gU6OVQojT5Ck7jbdVPBdCQb_Yt7E1wGun2lV4XYl1A/exec",
   };
 
   try {
