@@ -2,7 +2,7 @@ export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
-// Force Add, Force Remove, Auto Remove, and Update a user
+// Force Add, Force Remove, Auto Remove, and Update a user | /rvlupdate & /rvlselfremove are connected to this
   const SCRIPT_URLS = {
     ForceAdd: process.env.GOOGLE_SCRIPT_FORCE_ADD || "https://script.google.com/macros/s/AKfycbyeGq2oYA9LYoYhfx7OhjAeROKuHhT95NskTS97ACGzxxIYAuhgQ96QOaGWo8YNH31_MQ/exec",
     ForceRemove: process.env.GOOGLE_SCRIPT_FORCE_REMOVE || "https://script.google.com/macros/s/AKfycbywaRk4i2Z_xhDJ2itErpr5e-xtaFtEHcxjuFBeAV-3lmmADeA-c_zNZ08Of8WKkWXZ6g/exec",
